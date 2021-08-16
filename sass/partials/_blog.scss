@@ -1,0 +1,57 @@
+/*INICIA SECCION BLOG*/
+.pageBlog{
+    margin-top: 5rem;
+
+    &__body {
+        color: $white;
+        padding: 1rem;
+
+        &__articulo{
+            padding: 1rem;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+
+            &__blogs-title {
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.5rem;
+                margin: 2rem;
+            }
+
+            &__blog-date {
+                font-size: 3rem;
+                font-weight: bold;
+                color: $green-light;
+                text-align: left;
+                margin-bottom:0;
+                }
+                
+            &__title {
+                text-transform: uppercase;
+                margin-top: 1rem;
+                font-size: 2rem;
+                color: $white;
+                font-style: normal;
+                text-transform: initial;
+            }
+
+            &__description{
+                font-weight: 400;
+                font-size: 1rem;
+                margin-top: 10px;
+                line-height: 1.5rem;
+            }
+
+            .boton{
+                margin-top: 1rem;
+            }
+        }
+    }
+    
+    
+}
+
+
+/*TERMINA SEECION BLOG*/

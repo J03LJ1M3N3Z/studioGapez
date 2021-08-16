@@ -1,0 +1,71 @@
+/*INICIA SECCION CONTACTO*/
+.pageContacto{
+    padding: 5rem 0;
+
+    h1{
+        font-size: 5rem;
+        padding: 2rem;
+        line-height: 5rem;
+        text-align: center;
+        color: $white;
+        border: 1px solid $white;
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;  
+    }
+
+    p{
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__form{
+        width:100%;
+        
+        .form-control,.form-select{
+                width: 100%;
+                margin-top: 1rem;
+                padding: 1rem;
+                font-family: 'Nanum Myeongjo', serif;
+                background-color: $gray-strong;
+                border: 1px solid  $green-light;
+                color: $green-light;
+        }
+        
+
+        label{
+            color: $white;
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        textarea{
+            resize: none;
+        }
+
+        .botones{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn{
+            background-color: $gray;
+            border: none;
+            color: $white;
+            max-width: 48%;
+            width: 100%;
+            cursor: pointer;
+            transition: all .5s ease;
+            border-radius: 0;
+            margin-top: 1rem;
+
+            &:hover{
+                background-color: $black;
+            }
+        }
+
+    }
+    
+}
+/*TERMINA SEECION CONTACTO*/

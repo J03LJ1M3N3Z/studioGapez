@@ -1,0 +1,15 @@
+/*Estilos pagina Error 404*/
+.error{
+    height: $height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        text-align: center;
+        strong{
+            font-style: italic;
+            color: $white;
+            font-size: 5.5rem;
+        }
+    }
+}

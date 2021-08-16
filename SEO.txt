@@ -1,0 +1,33 @@
+MODIFICACIOES PARA POSICIONAMIENTO SEO
+
+1- La imágenes están optimizadas a menos de 600kb
+2- Modificamos los title de acuerdo al nombre del studio y su sección correspondiente
+3- Se cambiaron todos title del sitio Web al nombre del estusio y la sección donde se encuentra
+4- Todo el sitio esta maquetado con etiquetas de semántica para identificar cada bloque
+5- Se agregaron descripciones en en el atributo alt de las imagnes (menú, footer, workshops)
+6- Cada META DESCRIPCIÓN va relacionana a con una o más keywords en cada sección interna del sitio
+7- Los enacabezados están distribuidos de manera jerárquica en cada sección  interna del sitio
+
+8- Se agregaron las siguientes Keywords a las secciones del sitio
+
+INDEX: FOTOGRAFÍA, FOTOGRAFÍAMX, BODAS, FAMILIA, SESIONES, NIÑOS, WORKSHOPS, RETRATOS, HISTORIAS, XV-AÑOS, ARTE-VISUAL
+
+NOSOTROS:FOTOGRAFÍA, ARTISTAS, HISTORIAS, GAPEZ, STUDIO, CREADORAS
+
+SERVICIOS: FOTOGRAFÍA, BODAS, FAMILIA, RETRATOS, XV-AÑOS, ARTE-VISUAL, TEMÁTICAS, MOMENTO, AMOR, PLASMAR, HISTORIA
+
+SESIONES: FOTOGRAFÍA, BODAS, FAMILIA, NIÑOS, BEBÉS, NOVIOS, MATRIMONIO, SAVE-DATE, XV-AÑOS, RETRATO, TEMÁTICAS, SESIÓN, COMPROMISO, ANILLO, STUDIO
+
+WORKSHOPS: FOTOGRAFÍA, STUDIO, WORKSHOP, ENSEÑAR, APRENDER, TÉCNICAS, PRÁCTICO, HERRAMIENTAS, TALENTO, ILUMINACIÓN, RETRATO, EDICIÓN, IMAGEN
+
+BLOG: FOTOGRAFÍA, SESIONES, INPIRACIÓN, HISTORIAS, VIAJES, ARTÍCULOS
+
+CONTACTO: CONTACTO, ENLACE, PLAN, COTIZACIÓN, INFORMACIÓN
+
+9- Se integraron las primeras redes sociales Facebook e Instagram para tener canales de comunicación adicionales al sitio web
+https://www.instagram.com/gapezfotografia/
+https://www.facebook.com/Gapez.Photostudio
+
+10 - Se creo la carpeta de VIEWS para agrupar las secciones internas y tener una mejor organización del proyeco 
+
+11 - Se creo pagina de error 404 en la carpeta de VIEWS

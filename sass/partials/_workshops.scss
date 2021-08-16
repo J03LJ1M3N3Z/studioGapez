@@ -1,0 +1,117 @@
+/*INICIA SECCION WORKSHOPS*/
+.pageWorkshops{
+    margin-top: 6rem;
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(autofit, minmax(1 span, 2 span));
+        gap: 1rem;
+        grid-auto-flow: dense;
+
+        &__principal, &__second{
+            min-height: 70vh;
+            background-color: $gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__principal{
+            grid-column: 2 span;
+            
+            &__content{
+                h1{
+                    color: $white;
+                    font-size: 3rem;
+                    text-shadow: 12px 2px 3px #3b3b3bee;
+                    max-width: 600px;
+                    width: 100%;
+                    margin: 0 auto;
+                    padding: 1rem 2rem;
+                    border: 1px solid $white;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                p{
+                    text-align: center;
+                    letter-spacing: 3px;
+                    font-size: 1.5rem;
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+        }
+
+        &__second{
+            background-position: center center;
+            background-size: cover;
+
+            &:nth-child(2){
+                background-image: url('../img/workshops/workshop1.jpg');
+            }
+
+            &:nth-child(3){
+                background-image: url('../img/workshops/workshop2.jpg');   
+            }
+
+            &:nth-child(4){
+                background-image: url('../img/workshops/workshop3.jpg'); 
+            }
+
+            &:nth-child(5){
+                background-image: url('../img/workshops/workshop4.jpg');
+            }
+        }
+    }
+}
+
+
+
+.color-change-3x {
+    -webkit-animation: color-change-3x 5s linear infinite alternate both;
+            animation: color-change-3x 5s linear infinite alternate both;
+}
+@-webkit-keyframes color-change-3x {
+    0% {
+        background: $green;
+    }
+    50% {
+        background: $green-light;
+    }
+    100% {
+        background: $gray;
+    }
+    }
+    @keyframes color-change-3x {
+    0% {
+        background: $gray;
+    }
+    50% {
+        background: $green-light;
+    }
+    100% {
+        background: $green;
+    }
+}
+
+.carousel-item{
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        mix-blend-mode: multiply;
+        transition: all .5s ease;
+        z-index: 1;
+    }
+
+}
+
+/*TERMINA SEECION WORKSHOPS*/

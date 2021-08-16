@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "mappings": "AQCA,OAAO,CAAC,4FAAI;AFEZ,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;AAED,AAAA,IAAI,CAAA;EACA,WAAW,EAAE,uBAAuB;EACpC,gBAAgB,EAAE,OAAO;CAC5B;;AAED,AAAA,OAAO,CAAA;EACH,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,IAAI;CACtB;;AAED,AAAA,EAAE,CAAA;EACE,KAAK,EAAE,OAAO;EACd,MAAM,EAAE,MAAM;EACd,SAAS,EAAE,IAAI;CAClB;;AAED,AAAA,EAAE,CAAA;EACE,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,GAAG;EAChB,cAAc,EAAE,SAAS;EACzB,cAAc,EAAE,GAAG;EACnB,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,IAAI;CACtB;;AAED,AAAA,EAAE,CAAA;EACE,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,IAAI;CACd;;AAED,AAAA,EAAE,CAAA;EACE,KAAK,EAAE,IAAI;CACd;;AAED,AAAA,EAAE,CAAA;EACE,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,MAAM;CACpB;;AAED,AAAA,CAAC,CAAA;EACG,KAAK,EAAC,IAAI;EACV,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,MAAM;EACd,WAAW,EAAE,MAAM;CACtB",
+    "sources": [
+        "style.scss",
+        "partials/_variables.scss",
+        "partials/_header.scss",
+        "partials/_variables.scss",
+        "partials/_footer.scss",
+        "partials/_variables.scss",
+        "partials/_generales.scss",
+        "partials/_variables.scss",
+        "partials/_tipografias.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

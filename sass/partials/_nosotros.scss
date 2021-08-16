@@ -1,0 +1,67 @@
+/*INICIA SECCION NOSOTROS*/
+.team__content{
+    margin:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+
+    &__contentPerson,&__portada{
+        flex-basis: 50%;
+
+        p{
+            padding: 1rem;
+
+            strong{
+                font-size: 2rem;
+            }
+        }
+    }
+
+
+    
+    &--personOne{
+        .team__content{
+            &__portada{
+                background-image: url('../img/nosotros/fani-gapez-vertical.jpg');
+                background-position: center center;
+                background-size: cover;
+            }
+
+            &__contentPerson{
+                &__img2{
+                    background-image: url('../img/nosotros/fani-gapez.jpg');
+                    height: 70vh;
+                    background-position: center center;
+                    background-size: cover;      
+                }
+            }
+        }
+    }
+
+    &--personTwo{
+        .team__content{
+
+            &__portada{
+                background-image: url('../img/nosotros/mama-gapez-vertical.jpg');
+                background-position: center center;
+                background-size: cover;
+            }
+    
+            &__contentPerson{
+                &__img2{
+                    background-image: url('../img/nosotros/mama-gapez.jpg');
+                    height: 70vh;
+                    background-position: center center;
+                    background-size: cover;
+                }
+            }
+
+        }  
+        
+    }
+}
+
+
+
+/*TERMINA SEECION NOSOTROS*/

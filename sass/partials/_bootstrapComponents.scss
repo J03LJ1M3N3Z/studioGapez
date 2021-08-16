@@ -1,0 +1,98 @@
+
+.sinPadding{
+    padding: 0;
+}
+
+/* Estilos del menu  Bootstrap*/
+
+.navbar{
+    width: 100%; 
+    position: absolute;
+    top: 0;
+    background-color: rgba($black,.6);
+    z-index: 99;
+    .navbar-nav{
+        .nav-item{
+            width: 100%;
+            margin: 5px;
+            padding: 5px;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 0%;
+                height: 2px;
+                background-color: $white;
+                margin-top: .2rem;
+                transition: all .5s ease;
+                bottom: 0;
+                left: 0;
+            }
+
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+
+            .nav-link{
+                text-decoration: none;
+                color:$white;
+                display: block;
+                font-size: .8rem;
+                letter-spacing: .2rem;
+            }
+        }
+    }
+
+}
+
+
+.navbar-expand-lg {
+    .navbar-collapse{
+        justify-content: flex-end;
+    }
+    
+}
+
+
+.navbar-toggler{
+    border: 1px solid $white;
+    padding: .5rem 1rem;
+
+    i{
+        font-size: 1.5rem;
+        font-weight: 100;
+        color: $white;
+    }
+}
+
+.navbar-expand-lg{
+    width: 100%;
+}
+
+/*COMPONENTE OFFCANVAS DE BOOTSRAP*/
+
+.canvas-btn{
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    z-index: 3;
+    background-color: $green-light;
+    color: $white;
+    transition: all .5s ease;
+
+    &:hover{
+        background-color: $gray;
+        color: $white;
+    }
+
+}
+
+.offcanvas{
+    background-color: $gray-strong;
+    color: $green-light;
+}
+
+
+

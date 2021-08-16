@@ -1,0 +1,46 @@
+/*INICIA SECCION SERVICIOS*/
+.pageServicios{
+    margin-top: 5rem;
+
+    &__contServicio{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 1rem;
+
+        &__portada{
+            height: 80vh;
+            width: 49%;
+            background-size: cover;
+            background-position: top center;
+            border-radius: 10px;
+
+            &--portada1{
+                background-image: url(../img/home/bodasXV.jpg); 
+            }
+        
+
+        
+            &--portada2{
+                background-image: url(../img/home/tematicas.jpg);              
+            }
+        
+        
+            &--portada3{
+                background-position: center center;
+                background-image: url(../img/home/retratos.jpg);          
+            }
+        }
+
+        &__contenido{
+            width: 39%;
+            text-align: center;
+            
+            
+        }
+    }
+
+}
+
+/*TERMINA SEECION SERVICIOS*/

@@ -1,0 +1,448 @@
+/*--------------RESPONSIVE----------*/
+
+
+/* extra Small Devices*/
+
+@media only screen and (min-width: 0px){
+
+    /*Generales*/
+    h1,h2,h3,h4,h5,h6,p{
+        text-align: center;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    /*Responsive Index*/
+
+    .banner {
+        h1{
+            font-size: 2rem;
+            letter-spacing: .1rem; 
+        }
+    }
+
+    .nosotros{
+        .perfil{
+            background-size: 100%;
+            background-repeat: no-repeat;
+
+            article{
+                h3{
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
+
+            .servicios{
+                article{
+                    height: 70vh;
+                }
+            }
+        }
+    }
+
+    .sesiones{
+        .imagenes{
+            a{
+                flex-basis: 100%;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    .workshops{
+        article{
+            height: 60vh;
+        }
+    }
+
+    .blog{
+        padding: 1rem;
+        height: auto;
+    }
+
+    /*Responsive Seccion NOSOTROS*/
+    .team{
+        flex-wrap: wrap;
+
+        .portada, .contentPerson{
+            flex-basis: 100%;
+        }
+
+        &.personOne,&.personTwo{
+            
+            .portada{
+                height: 70vh;
+            }
+
+            p{
+                text-align: center;
+            }
+        }
+
+        &.personOne{
+            .portada{
+                order: 2;
+            }
+    
+            .contentPerson{
+                order: 1;
+            }
+        }
+
+        &.personTwo{
+            .portada{
+                order: 1;
+            }
+    
+            .contentPerson{
+                order: 2;
+            }
+        }
+
+        
+    }
+
+
+    /*Responsive Seccion SERVICIOS*/
+    .contServicio{
+        .portada{
+            order: 1;
+            width: 100%;
+        }
+
+        .contenido-servicio{
+            order: 2;
+            width: 100%;
+            margin-top: 1rem;
+        }
+    }
+
+    /*Estilos Workshops*/
+    .pageWorkshops{
+        .workshop-grid{
+            .workshop-principal{
+                min-height: auto;
+
+                .workshopContent{
+                    h1{
+                        width: 100%;
+                        font-size: 2.5rem;
+                        max-width: 450px;
+                        padding: 1rem;
+                    }
+                }
+            }
+            .workshop-principal,.workshop-second{
+                grid-column: 1 span;
+            }
+
+        }
+    }
+
+
+
+    /*Estilos Blog*/
+    .pageBlog{
+        &__body{
+            &__grid{
+                &__articulo{
+                    margin: 2rem 0;
+
+                    &__date{
+                        text-align: center;
+                        font-size: 2rem;
+                    }
+                    
+                }
+            }
+        }
+
+        .boton{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+
+
+/* Responsive Contacto*/
+
+    .pageContacto {
+        h1{
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+    }
+
+
+}
+
+
+@media only screen and (min-width: 575px){
+
+
+    /*Generales*/
+
+    h2{
+        font-size: 3rem;
+    }
+
+    
+    /*Responsive Index*/ 
+    .banner{
+        h1{
+            font-size: 3.5rem;
+            letter-spacing: .8rem; 
+        }
+    }
+
+
+    .servicios{
+        article{
+            height: 80vh; 
+        }
+    }
+
+    .nosotros{
+        .perfil{
+            height: 80vh;
+        }
+    }
+
+
+}
+
+
+/*Small Devices*/
+
+@media only screen and (min-width: 650px){
+
+
+}
+
+
+@media (min-width: 600px) {
+/*  Responsive para secciion de Sesiones*/
+    .pageSesiones{
+        &__gridContainer{
+
+            &__gridItem{
+                &--wide {
+                    grid-column: span 2;
+                }
+            
+                &--tall {
+                    grid-row: span 2;
+                }
+            }
+        }
+
+    }
+    
+}
+
+
+    /*Medium devices*/
+
+@media only screen and (min-width: 768px){
+    /*Estilos index*/
+
+    .nosotros{
+        .perfil{
+            background-size: 100%;
+            display: flex;
+            align-items: flex-end;
+            height: initial;
+            height: 80vh;
+            .info{
+                
+            }
+        }
+    }
+
+    .sesiones{
+        .imagenes{
+            a{
+                flex-basis: auto;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    /*Responsive seccion NOSOTROS*/
+
+    .team{
+
+        .portada, .contentPerson{
+            flex-basis: 50%;
+        }
+
+        &.personOne,&.personTwo{
+            .contentPerson,.portada{
+                order: 2;
+            }
+
+            .portada{
+                height: unset;
+            }
+            
+        }
+
+        
+    }
+
+
+
+
+
+    /*Responsive seccion SERVICIOS*/
+    .contServicio,.contServicio{
+        .portada,.contenido-servicio{
+            width: 40%;
+            order: initial;
+        }
+    }
+
+    /*Estilos Workshops*/
+ 
+
+    .pageWorkshops{
+        .workshop-grid{
+            .workshop-principal{
+                grid-column: 2 span;
+                .workshopContent{
+                    h1{
+                        font-size: 4rem;
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+/*Large Devices*/
+
+@media only screen and (min-width:991px) {
+    /*Estilos Contacto*/
+    .pageContacto{
+        h1{
+            font-size: 5rem;
+            line-height: 5rem;
+        }
+    }
+}
+
+
+/*Responsive Blog*/
+@media (min-width: 950px) {
+    /*Estilos Blog*/
+    .pageBlog{
+        &__body{
+            &__grid{
+                display: grid;
+                grid-template-columns: auto 2px auto;
+                gap: 20px 70px;
+                padding: 3rem;
+                justify-content: center;
+                max-width: 1200px;
+                width: 100%;
+                margin: 0 auto;
+
+                &__line {
+                    background-color: $white;
+                    position: relative;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        background-color: $white;
+                        border-radius: 50%;
+                
+                        position: absolute;
+                        top: -20px;
+                        left: -9px;
+                    }
+                
+                    &::after {
+                        top: 100%;
+                        z-index: 1;
+                    }
+                }
+            
+                
+                
+                &__articulo{
+                    
+                    .boton{
+                        margin: 0;
+                    }
+
+                    &__date{
+                        font-size: 40px;
+                        font-size: 3rem;
+                        text-align: left;
+                    }
+                
+                    &__title{
+                        font-size: 25px;
+                        text-align: left;
+
+                        &__description{ 
+                            line-height: 1.3rem;
+                            p{
+                                text-align: left;
+                            }
+                        }
+                    }
+                
+                    
+
+                    &--left {
+                        .pageBlog{
+                            &__body{
+
+                                &__grid{
+                                    &__articulo{
+                                        &__date,&__title,&__description p{
+                                            text-align: left;
+                                            
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 1024px){
+
+}
+
+
+
+/*Exra Large Devices*/
+/*Large Devices*/
+@media only screen and (max-width: 1224px){
+
+}
