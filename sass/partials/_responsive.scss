@@ -114,18 +114,22 @@
 
 
     /*Responsive Seccion SERVICIOS*/
-    .contServicio{
-        .portada{
-            order: 1;
-            width: 100%;
-        }
-
-        .contenido-servicio{
-            order: 2;
-            width: 100%;
-            margin-top: 1rem;
+    .pageServicios{
+        &__contServicio{
+            &__portada{
+                order: 1;
+                width: 100%;
+                height: 70vh;
+            }
+    
+            &__contenido{
+                order: 2;
+                width: 100%;
+                margin-top: 1rem;
+            }
         }
     }
+    
 
     /*Estilos Workshops*/
     .pageWorkshops{
