@@ -1412,8 +1412,8 @@ p {
     height: unset;
   }
   /*Responsive seccion SERVICIOS*/
-  .contServicio .portada, .contServicio .contenido-servicio, .contServicio .portada, .contServicio .contenido-servicio {
-    width: 40%;
+  .pageServicios__contServicio__portada, .pageServicios__contServicio__contenido {
+    width: 48%;
     -webkit-box-ordinal-group: initial;
         -ms-flex-order: initial;
             order: initial;

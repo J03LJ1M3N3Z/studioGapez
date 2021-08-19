@@ -310,15 +310,17 @@
 
 
     /*Responsive seccion SERVICIOS*/
-    .contServicio,.contServicio{
-        .portada,.contenido-servicio{
-            width: 40%;
-            order: initial;
+
+    .pageServicios{
+        &__contServicio{
+            &__portada,&__contenido{
+                width: 48%;
+                order: initial;
+            }
         }
     }
 
     /*Estilos Workshops*/
- 
 
     .pageWorkshops{
         .workshop-grid{
