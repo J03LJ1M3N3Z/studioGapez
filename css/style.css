@@ -1253,12 +1253,14 @@ p {
   .servicios__contenido {
     width: 100%;
   }
-  .sesiones .imagenes a {
+  .sesiones__imagenes__foto {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    height: 45vh;
+    background-position: top;
   }
   .workshops article {
     height: 60vh;
@@ -1365,9 +1367,6 @@ p {
     font-size: 3.5rem;
     letter-spacing: .8rem;
   }
-  .nosotros .perfil {
-    height: 80vh;
-  }
 }
 
 /*Small Devices*/
@@ -1395,15 +1394,16 @@ p {
     height: initial;
     height: 85vh;
   }
-  .servicios__ {
+  .servicios__portada {
     height: 80vh;
   }
-  .sesiones .imagenes a {
+  .sesiones__imagenes__foto {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    height: 70vh;
   }
   /*Responsive seccion NOSOTROS*/
   .team__content__portada, .team__content__contentPerson {

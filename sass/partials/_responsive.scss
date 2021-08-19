@@ -49,10 +49,12 @@
     }
 
     .sesiones{
-        .imagenes{
-            a{
+        &__imagenes{
+            &__foto{
                 flex-basis: 100%;
                 flex-grow: 1;
+                height: 45vh;
+                background-position: top ;
             }
         }
     }
@@ -221,11 +223,6 @@
     }
 
 
-    .nosotros{
-        .perfil{
-            height: 80vh;
-        }
-    }
 
 
 }
@@ -271,16 +268,17 @@
     }
 
     .servicios{
-        &__{
+        &__portada{
             height: 80vh; 
         }
     }
 
     .sesiones{
-        .imagenes{
-            a{
+        &__imagenes{
+            &__foto{
                 flex-basis: auto;
                 flex-grow: 1;
+                height: 70vh;
             }
         }
     }
