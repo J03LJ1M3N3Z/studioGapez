@@ -133,11 +133,11 @@
 
     /*Estilos Workshops*/
     .pageWorkshops{
-        .workshop-grid{
-            .workshop-principal{
+        &__grid{
+            &__principal{
                 min-height: auto;
 
-                .workshopContent{
+                &__content{
                     h1{
                         width: 100%;
                         font-size: 2.5rem;
@@ -146,7 +146,12 @@
                     }
                 }
             }
-            .workshop-principal,.workshop-second{
+
+            &__second{
+                height: 70vh;
+            }
+
+            &__principal,&__second{
                 grid-column: 1 span;
             }
 
@@ -323,10 +328,10 @@
     /*Estilos Workshops*/
 
     .pageWorkshops{
-        .workshop-grid{
-            .workshop-principal{
+        &__grid{
+            &__principal{
                 grid-column: 2 span;
-                .workshopContent{
+                &__workshopContent{
                     h1{
                         font-size: 4rem;
                         max-width: 600px;

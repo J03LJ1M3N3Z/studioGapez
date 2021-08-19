@@ -1317,16 +1317,19 @@ p {
     margin-top: 1rem;
   }
   /*Estilos Workshops*/
-  .pageWorkshops .workshop-grid .workshop-principal {
+  .pageWorkshops__grid__principal {
     min-height: auto;
   }
-  .pageWorkshops .workshop-grid .workshop-principal .workshopContent h1 {
+  .pageWorkshops__grid__principal__content h1 {
     width: 100%;
     font-size: 2.5rem;
     max-width: 450px;
     padding: 1rem;
   }
-  .pageWorkshops .workshop-grid .workshop-principal, .pageWorkshops .workshop-grid .workshop-second {
+  .pageWorkshops__grid__second {
+    height: 70vh;
+  }
+  .pageWorkshops__grid__principal, .pageWorkshops__grid__second {
     grid-column: 1 span;
   }
   /*Estilos Blog*/
@@ -1419,10 +1422,10 @@ p {
             order: initial;
   }
   /*Estilos Workshops*/
-  .pageWorkshops .workshop-grid .workshop-principal {
+  .pageWorkshops__grid__principal {
     grid-column: 2 span;
   }
-  .pageWorkshops .workshop-grid .workshop-principal .workshopContent h1 {
+  .pageWorkshops__grid__principal__workshopContent h1 {
     font-size: 4rem;
     max-width: 600px;
   }
