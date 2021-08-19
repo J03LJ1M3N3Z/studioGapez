@@ -1238,16 +1238,14 @@ p {
     font-size: 2rem;
     letter-spacing: .1rem;
   }
-  .nosotros .perfil {
+  .nosotros__perfil {
     background-size: 100%;
     background-repeat: no-repeat;
+    height: 70vh;
   }
-  .nosotros .perfil article h3 {
+  .nosotros__perfil__info h3 {
     text-align: center;
     margin: 0 auto;
-  }
-  .nosotros .perfil .servicios article {
-    height: 70vh;
   }
   .sesiones .imagenes a {
     -ms-flex-preferred-size: 100%;

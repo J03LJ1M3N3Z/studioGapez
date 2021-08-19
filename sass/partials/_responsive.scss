@@ -24,20 +24,15 @@
     }
 
     .nosotros{
-        .perfil{
+        &__perfil{
             background-size: 100%;
             background-repeat: no-repeat;
+            height: 70vh;
 
-            article{
+            &__info{
                 h3{
                     text-align: center;
                     margin: 0 auto;
-                }
-            }
-
-            .servicios{
-                article{
-                    height: 70vh;
                 }
             }
         }
