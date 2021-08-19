@@ -64,44 +64,51 @@
     }
 
     /*Responsive Seccion NOSOTROS*/
-    .team{
+    .team__content{
         flex-wrap: wrap;
-
-        .portada, .contentPerson{
+        
+        &__portada, &__contentPerson{
             flex-basis: 100%;
         }
 
-        &.personOne,&.personTwo{
+        &__portada{
+            height: 70vh;
             
-            .portada{
+        }
+
+        &--personOne,&--personTwo{
+            &__portada{
                 height: 70vh;
-            }
-
-            p{
-                text-align: center;
+                
+                p{
+                    text-align: center;
+                }
             }
         }
 
-        &.personOne{
-            .portada{
-                order: 2;
+        &--personOne{
+            .team__content{
+                &__contentPerson{
+                    order: 1;
+                }
+                &__portada{
+                    order: 2;
+                }
             }
+        }
+
+        &--personTwo{
+            .team__content{
+                &__contentPerson{
+                    order: 2;
+                }
+                &__portada{
+                    order: 1;
+                }
+            }
+        }
+
     
-            .contentPerson{
-                order: 1;
-            }
-        }
-
-        &.personTwo{
-            .portada{
-                order: 1;
-            }
-    
-            .contentPerson{
-                order: 2;
-            }
-        }
-
         
     }
 
@@ -257,9 +264,7 @@
             align-items: flex-end;
             height: initial;
             height: 80vh;
-            .info{
-                
-            }
+            
         }
     }
 
@@ -274,19 +279,21 @@
 
     /*Responsive seccion NOSOTROS*/
 
-    .team{
+    .team__content{
 
-        .portada, .contentPerson{
+        &__portada, &__contentPerson{
             flex-basis: 50%;
         }
 
-        &.personOne,&.personTwo{
-            .contentPerson,.portada{
-                order: 2;
-            }
-
-            .portada{
-                height: unset;
+        &--personOne,&--personTwo{
+            .team__content{
+                &__contentPerson,&__portada{
+                    order: 2;
+                }
+    
+                &__portada{
+                    height: unset;
+                }
             }
             
         }

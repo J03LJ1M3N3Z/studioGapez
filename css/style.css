@@ -1264,39 +1264,42 @@ p {
     height: auto;
   }
   /*Responsive Seccion NOSOTROS*/
-  .team {
+  .team__content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .team .portada, .team .contentPerson {
+  .team__content__portada, .team__content__contentPerson {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  .team.personOne .portada, .team.personTwo .portada {
+  .team__content__portada {
     height: 70vh;
   }
-  .team.personOne p, .team.personTwo p {
+  .team__content--personOne__portada, .team__content--personTwo__portada {
+    height: 70vh;
+  }
+  .team__content--personOne__portada p, .team__content--personTwo__portada p {
     text-align: center;
   }
-  .team.personOne .portada {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  .team.personOne .contentPerson {
+  .team__content--personOne .team__content__contentPerson {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  .team.personTwo .portada {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .team.personTwo .contentPerson {
+  .team__content--personOne .team__content__portada {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  .team__content--personTwo .team__content__contentPerson {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .team__content--personTwo .team__content__portada {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   /*Responsive Seccion SERVICIOS*/
   .contServicio .portada {
@@ -1395,16 +1398,16 @@ p {
             flex-grow: 1;
   }
   /*Responsive seccion NOSOTROS*/
-  .team .portada, .team .contentPerson {
+  .team__content__portada, .team__content__contentPerson {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
-  .team.personOne .contentPerson, .team.personOne .portada, .team.personTwo .contentPerson, .team.personTwo .portada {
+  .team__content--personOne .team__content__contentPerson, .team__content--personOne .team__content__portada, .team__content--personTwo .team__content__contentPerson, .team__content--personTwo .team__content__portada {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  .team.personOne .portada, .team.personTwo .portada {
+  .team__content--personOne .team__content__portada, .team__content--personTwo .team__content__portada {
     height: unset;
   }
   /*Responsive seccion SERVICIOS*/
