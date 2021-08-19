@@ -1247,6 +1247,12 @@ p {
     text-align: center;
     margin: 0 auto;
   }
+  .servicios__portada {
+    height: 70vh;
+  }
+  .servicios__contenido {
+    width: 100%;
+  }
   .sesiones .imagenes a {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -1359,9 +1365,6 @@ p {
     font-size: 3.5rem;
     letter-spacing: .8rem;
   }
-  .servicios article {
-    height: 80vh;
-  }
   .nosotros .perfil {
     height: 80vh;
   }
@@ -1381,7 +1384,7 @@ p {
 /*Medium devices*/
 @media only screen and (min-width: 768px) {
   /*Estilos index*/
-  .nosotros .perfil {
+  .nosotros__perfil {
     background-size: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1390,6 +1393,9 @@ p {
         -ms-flex-align: end;
             align-items: flex-end;
     height: initial;
+    height: 85vh;
+  }
+  .servicios__ {
     height: 80vh;
   }
   .sesiones .imagenes a {

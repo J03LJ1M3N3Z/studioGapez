@@ -23,7 +23,7 @@
         }
     }
 
-    .nosotros{
+.nosotros{
         &__perfil{
             background-size: 100%;
             background-repeat: no-repeat;
@@ -35,6 +35,16 @@
                     margin: 0 auto;
                 }
             }
+        }
+    }
+
+    .servicios{
+        &__portada{
+            height: 70vh;
+        }
+
+        &__contenido{
+            width: 100%;
         }
     }
 
@@ -211,12 +221,6 @@
     }
 
 
-    .servicios{
-        article{
-            height: 80vh; 
-        }
-    }
-
     .nosotros{
         .perfil{
             height: 80vh;
@@ -256,13 +260,19 @@
     /*Estilos index*/
 
     .nosotros{
-        .perfil{
+        &__perfil{
             background-size: 100%;
             display: flex;
             align-items: flex-end;
             height: initial;
-            height: 80vh;
+            height: 85vh;
             
+        }
+    }
+
+    .servicios{
+        &__{
+            height: 80vh; 
         }
     }
 
