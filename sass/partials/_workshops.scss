@@ -14,10 +14,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            
+            @include movil0{
+                grid-column: 1 span;
+            }
         }
 
         &__principal{
-            grid-column: 2 span;
+
+            @include movil0{
+                min-height: auto;
+            }
+
+            @include movil768{
+                grid-column: 2 span;
+            }
             
             &__content{
                 h1{
@@ -31,6 +42,18 @@
                     border: 1px solid $white;
                     position: relative;
                     z-index: 2;
+
+                    @include movil0{
+                        width: 100%;
+                        font-size: 2.5rem;
+                        max-width: 450px;
+                        padding: 1rem;
+                    }
+
+                    @include movil768{
+                        font-size: 4rem;
+                        max-width: 600px;
+                    }
                 }
 
                 p{
@@ -47,22 +70,18 @@
             background-position: center center;
             background-size: cover;
 
-            &:nth-child(2){
-                background-image: url('../img/workshops/workshop1.jpg');
+            @include movil0{
+                height: 70vh;
             }
 
-            &:nth-child(3){
-                background-image: url('../img/workshops/workshop2.jpg');   
-            }
+            @for $i from 2 through 5{
 
-            &:nth-child(4){
-                background-image: url('../img/workshops/workshop3.jpg'); 
-            }
+                &:nth-child(#{$i}){
+                    background-image: url('../img/workshops/workshop#{$i}.jpg');
+                }
 
-            &:nth-child(5){
-                background-image: url('../img/workshops/workshop4.jpg');
-            }
-        }
+            } 
+        } 
     }
 }
 

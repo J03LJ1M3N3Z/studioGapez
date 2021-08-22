@@ -11,7 +11,17 @@
         border: 1px solid $white;
         max-width: 600px;
         width: 100%;
-        margin: 0 auto;  
+        margin: 0 auto; 
+        
+        @include movil0{
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+        
+        @include movil991{
+            font-size: 5rem;
+            line-height: 5rem;
+        }
     }
 
     p{

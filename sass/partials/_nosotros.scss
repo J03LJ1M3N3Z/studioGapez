@@ -6,6 +6,10 @@
     justify-content: space-between;
     align-items: stretch;
 
+    @include movil0{
+        flex-wrap: wrap;   
+    }
+
     &__contentPerson,&__portada{
         flex-basis: 50%;
 
@@ -15,6 +19,20 @@
             strong{
                 font-size: 2rem;
             }
+        }
+
+        @include movil0{
+            flex-basis: 100%;
+        }
+
+        @include movil768{
+            flex-basis: 50%;
+        }
+    }
+
+    &__portada{
+        @include movil0{
+            height: 70vh;
         }
     }
 
@@ -26,6 +44,10 @@
                 background-image: url('../img/nosotros/fani-gapez-vertical.jpg');
                 background-position: center center;
                 background-size: cover;
+
+                @include movil0{
+                    order: 2;
+                }
             }
 
             &__contentPerson{
@@ -35,9 +57,14 @@
                     background-position: center center;
                     background-size: cover;      
                 }
+
+                @include movil0{
+                    order: 1;
+                }
             }
         }
     }
+
 
     &--personTwo{
         .team__content{
@@ -46,6 +73,10 @@
                 background-image: url('../img/nosotros/mama-gapez-vertical.jpg');
                 background-position: center center;
                 background-size: cover;
+
+                @include movil0{
+                    order: 1;
+                }
             }
     
             &__contentPerson{
@@ -55,11 +86,50 @@
                     background-position: center center;
                     background-size: cover;
                 }
+
+                @include movil0{
+                    order: 2;
+                }
             }
 
         }  
         
     }
+
+    &--personOne,&--personTwo{
+        &__portada{
+            @include movil0{
+                height: 70vh;
+            }
+            
+            
+            p{
+                @include movil0{
+                    text-align: center;
+                }
+                
+            }
+        }
+
+        .team__content{
+            &__contentPerson,&__portada{
+                @include movil768{
+                    order: 2;
+                }
+                
+            }
+
+            &__portada{
+                @include movil768{
+                    height: unset;
+                } 
+            }
+        }
+
+
+    }
+
+    
 }
 
 

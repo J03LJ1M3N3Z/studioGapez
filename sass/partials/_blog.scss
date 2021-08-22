@@ -6,51 +6,144 @@
         color: $white;
         padding: 1rem;
 
-        &__articulo{
-            padding: 1rem;
-            max-width: 600px;
-            width: 100%;
-            margin: 0 auto;
-
-            &__blogs-title {
-                text-align: center;
-                text-transform: uppercase;
-                font-weight: bold;
-                font-size: 1.5rem;
-                margin: 2rem;
+        &__grid{
+            @include movil950{
+                display: grid;
+                grid-template-columns: auto 2px auto;
+                gap: 20px 70px;
+                padding: 3rem;
+                justify-content: center;
+                max-width: 1200px;
+                width: 100%;
+                margin: 0 auto;
             }
 
-            &__blog-date {
-                font-size: 3rem;
-                font-weight: bold;
-                color: $green-light;
-                text-align: left;
-                margin-bottom:0;
+            &__line{
+                @include movil950{
+                    background-color: $white;
+                    position: relative;
                 }
+
+                &::before,
+                &::after {
+                    @include movil950{
+                        content: "";
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        background-color: $white;
+                        border-radius: 50%;
                 
-            &__title {
-                text-transform: uppercase;
-                margin-top: 1rem;
-                font-size: 2rem;
-                color: $white;
-                font-style: normal;
-                text-transform: initial;
+                        position: absolute;
+                        top: -20px;
+                        left: -9px;
+                    }
+                    
+                }
+                    
+                &::after {
+                    @include movil950{
+                        top: 100%;
+                        z-index: 1;
+                    }
+                }
             }
+        
 
-            &__description{
-                font-weight: 400;
-                font-size: 1rem;
-                margin-top: 10px;
-                line-height: 1.5rem;
-            }
+            &__articulo{
+                padding: 1rem;
+                max-width: 600px;
+                width: 100%;
+                margin: 0 auto;
 
-            .boton{
-                margin-top: 1rem;
+                &__date {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    color: $green-light;
+                    text-align: left;
+                    margin-bottom:0;
+
+                    @include movil0{
+                        text-align: center;
+                        font-size: 2rem;
+                    }
+
+                    @include movil950{
+                        font-size: 40px;
+                        font-size: 3rem;
+                        text-align: left;
+                    }
+                }
+                    
+                &__title {
+                    text-transform: uppercase;
+                    margin-top: 1rem;
+                    font-size: 2rem;
+                    color: $white;
+                    font-style: normal;
+                    text-transform: initial;
+
+                    @include movil950{
+                        font-size: 25px;
+                        text-align: left;
+                    }
+                
+
+                    &__description{
+                        font-weight: 400;
+                        font-size: 1rem;
+                        margin-top: 10px;
+                        line-height: 1.5rem;
+            
+                        @include movil950{
+                            line-height: 1.3rem;
+                        }
+
+                        p{
+                            @include movil950{
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+
+                .boton{
+                    margin-top: 1rem;
+                    @include movil0{
+                        display: block;
+                        margin: 0 auto;
+                    }
+
+                    @include movil950{
+                        margin: 0;
+                    }
+                }
+
+                &--left {
+                    .pageBlog{
+                        &__body{
+
+                            &__grid{
+                                &__articulo{
+                                    &__date,&__title,&__description p{
+                                        @include movil950{
+                                            text-align: left;
+                                        }
+                                        
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                @include movil0{
+                    margin: 2rem auto;
+                }
             }
         }
     }
-    
-    
 }
 
 

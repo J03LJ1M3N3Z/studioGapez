@@ -20,37 +20,27 @@
             border-radius: 4px;
             transition: all 0.5s ease;
 
-            &:nth-child(1){
-                background-image: url(../img/sesiones/img7.jpg);
+            &--wide {
+                @include movil600{
+                    grid-column: span 2;
+                }
+                
+            }
+        
+            &--tall {
+                @include movil600{
+                    grid-row: span 2;  
+                }
+                
             }
 
-            &:nth-child(2){
-                background-image: url(../img/sesiones/img8.jpg);                
-            }
-            &:nth-child(3){
-                background-image: url(../img/sesiones/img9.jpg);   
-            }
-            &:nth-child(4){
-                background-image: url(../img/sesiones/img10.jpg);   
-            }
-            &:nth-child(5){
-                background-image: url(../img/sesiones/img11.jpg);       
-            }
-            &:nth-child(6){
-                background-image: url(../img/sesiones/img12.jpg);               
-            }
-            &:nth-child(7){
-                background-image: url(../img/sesiones/img13.jpg);     
-            }
-            &:nth-child(8){
-                background-image: url(../img/sesiones/img14.jpg);    
-            }
-            &:nth-child(9){
-                background-image: url(../img/sesiones/img15.jpg);   
-            }
-            &:nth-child(10){
-                background-image: url(../img/sesiones/img16.jpg);
-            }
+            @for $i from 1 through 10{
+
+                &:nth-child(#{$i}){
+                    background-image: url('../img/sesiones/img#{$i}.jpg');
+                }
+
+            } 
 
             &:hover{
                 filter: grayscale(0.9);

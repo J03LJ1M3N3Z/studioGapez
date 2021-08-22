@@ -14,6 +14,16 @@
         color: $white;
         letter-spacing: .8rem;
         text-shadow: 6px 11px 16px $black;
+
+        @include movil0{
+            font-size: 2rem;
+            letter-spacing: .1rem; 
+        }
+
+        @include movil575{
+            font-size: 3.5rem;
+            letter-spacing: .8rem; 
+        }
     }
 }
 
@@ -68,7 +78,12 @@
                 font-style: normal;
                 border-bottom: 1px solid $white;
                 max-width: 350px;
-                padding: 10px; 
+                padding: 10px;
+                
+                @include movil0{
+                    text-align: center;
+                    margin: 0 auto;
+                }
             }
 
             p{
@@ -93,16 +108,24 @@
             transition: all .5s ease;
             cursor: pointer;
         }
+
+
+        @include movil0{
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 70vh;
+        }
+
+        @include movil768{
+            background-size: 100%;
+            display: flex;
+            align-items: flex-end;
+            height: initial;
+            height: 85vh;
+        }
     }
     
 }
-
-
-
-
-
-
-
 
 
 /*Estilos servicios*/
@@ -149,6 +172,10 @@
             z-index: 2;
             bottom: -200px;
             transition: all .5s ease;
+
+            @include movil0{
+                width: 100%;
+            }
             
         }
 
@@ -172,6 +199,14 @@
                 }
             }
             
+        }
+
+        @include movil0{
+            height: 70vh;
+        }
+
+        @include movil768{
+            height: 80vh; 
         }
     }
 }
@@ -211,6 +246,19 @@
                 background-position: top center;
                 filter: grayscale(0);
             }
+
+            @include movil0{
+                flex-basis: 100%;
+                flex-grow: 1;
+                height: 45vh;
+                background-position: top ;
+            }
+
+            @include movil768{
+                flex-basis: auto;
+                flex-grow: 1;
+                height: 70vh;
+            }
         }
     }
 }
@@ -235,7 +283,7 @@
         transition: all .5s ease;
 
 
-        @for $i from 1 through 2{
+        @for $i from 2 through 3{
             &--workshop#{$i}{
                 background-image: url('../img/workshops/workshop#{$i}.jpg');
             }
@@ -299,6 +347,10 @@
             }
         }
 
+        @include movil0{
+            height: 60vh;
+        }
+
         
     }
 }
@@ -355,6 +407,11 @@
             display: block;
         }
     }
+
+    @include movil0{
+        padding: 2rem;
+        height: auto;
+    }
 }
 
 /* Estilos Contacto*/
@@ -408,6 +465,8 @@
             }
         }
     }
+
+    
 }
 
 

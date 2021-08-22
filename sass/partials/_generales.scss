@@ -1,5 +1,6 @@
 @import "variables";
 @import "tipografias";
+@import "responsive";
 
 *{
     margin: 0;
@@ -31,6 +32,15 @@ h2{
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
+    
+    @include movil0{
+        font-size: 2rem;
+    }
+
+    @include movil575{
+        font-size: 3rem;
+    }
+    
 }
 
 h3{
@@ -53,6 +63,13 @@ p{
     margin: 1rem 0;
     line-height: 1.5rem;
 }
+
+h1,h2,h3,h4,h5,h6,p{
+    @include movil0{
+        text-align: center;
+    }
+}
+
 
 .boton{
     text-decoration: none;

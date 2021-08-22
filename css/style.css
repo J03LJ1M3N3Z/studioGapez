@@ -226,6 +226,11 @@ nav .menuBurger i {
           transform: rotate(-15deg);
 }
 
+/*--------------RESPONSIVE----------*/
+/* extra Small Devices*/
+/*Small Devices*/
+/*Medium devices*/
+/*Large Devices*/
 * {
   margin: 0;
   padding: 0;
@@ -259,6 +264,18 @@ h2 {
   margin-bottom: 2rem;
 }
 
+@media only screen and (min-width: 0px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 575px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
 h3 {
   font-style: italic;
   color: #fff;
@@ -278,6 +295,12 @@ p {
   font-size: 1rem;
   margin: 1rem 0;
   line-height: 1.5rem;
+}
+
+@media only screen and (min-width: 0px) {
+  h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+  }
 }
 
 .boton {
@@ -339,6 +362,20 @@ p {
   text-shadow: 6px 11px 16px #000;
 }
 
+@media only screen and (min-width: 0px) {
+  .banner h1 {
+    font-size: 2rem;
+    letter-spacing: .1rem;
+  }
+}
+
+@media only screen and (min-width: 575px) {
+  .banner h1 {
+    font-size: 3.5rem;
+    letter-spacing: .8rem;
+  }
+}
+
 /*Estilos nosotros*/
 .nosotros h2 {
   width: 100%;
@@ -397,6 +434,13 @@ p {
   padding: 10px;
 }
 
+@media only screen and (min-width: 0px) {
+  .nosotros__perfil__info h3 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
 .nosotros__perfil__info p {
   padding: 1rem;
   z-index: 2;
@@ -415,6 +459,28 @@ p {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 0px) {
+  .nosotros__perfil {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nosotros__perfil {
+    background-size: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: initial;
+    height: 85vh;
+  }
 }
 
 /*Estilos servicios*/
@@ -476,6 +542,12 @@ p {
   transition: all .5s ease;
 }
 
+@media only screen and (min-width: 0px) {
+  .servicios__portada__contenido {
+    width: 100%;
+  }
+}
+
 .servicios__portada:hover {
   cursor: pointer;
 }
@@ -488,6 +560,18 @@ p {
   bottom: 0;
   text-align: center;
   width: 100%;
+}
+
+@media only screen and (min-width: 0px) {
+  .servicios__portada {
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .servicios__portada {
+    height: 80vh;
+  }
 }
 
 /*Estilos HOME-SESIONES*/
@@ -553,6 +637,29 @@ p {
           filter: grayscale(0);
 }
 
+@media only screen and (min-width: 0px) {
+  .sesiones__imagenes__foto {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    height: 45vh;
+    background-position: top;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sesiones__imagenes__foto {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    height: 70vh;
+  }
+}
+
 /*Estilos workshops*/
 .workshops {
   overflow: hidden;
@@ -580,12 +687,12 @@ p {
   transition: all .5s ease;
 }
 
-.workshops__articulo--workshop1 {
-  background-image: url("../img/workshops/workshop1.jpg");
-}
-
 .workshops__articulo--workshop2 {
   background-image: url("../img/workshops/workshop2.jpg");
+}
+
+.workshops__articulo--workshop3 {
+  background-image: url("../img/workshops/workshop3.jpg");
 }
 
 .workshops__articulo::after {
@@ -647,6 +754,12 @@ p {
 
 .workshops__articulo:hover .workshops__articulo__contenido {
   bottom: 0;
+}
+
+@media only screen and (min-width: 0px) {
+  .workshops__articulo {
+    height: 60vh;
+  }
 }
 
 /*ANIMACION AFTER*/
@@ -726,6 +839,13 @@ p {
   display: block;
 }
 
+@media only screen and (min-width: 0px) {
+  .blog {
+    padding: 2rem;
+    height: auto;
+  }
+}
+
 /* Estilos Contacto*/
 .contacto__form .form-control {
   width: 100%;
@@ -802,6 +922,13 @@ p {
           align-items: stretch;
 }
 
+@media only screen and (min-width: 0px) {
+  .team__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .team__content__contentPerson, .team__content__portada {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
@@ -815,10 +942,38 @@ p {
   font-size: 2rem;
 }
 
+@media only screen and (min-width: 0px) {
+  .team__content__contentPerson, .team__content__portada {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .team__content__contentPerson, .team__content__portada {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media only screen and (min-width: 0px) {
+  .team__content__portada {
+    height: 70vh;
+  }
+}
+
 .team__content--personOne .team__content__portada {
   background-image: url("../img/nosotros/fani-gapez-vertical.jpg");
   background-position: center center;
   background-size: cover;
+}
+
+@media only screen and (min-width: 0px) {
+  .team__content--personOne .team__content__portada {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .team__content--personOne .team__content__contentPerson__img2 {
@@ -828,10 +983,26 @@ p {
   background-size: cover;
 }
 
+@media only screen and (min-width: 0px) {
+  .team__content--personOne .team__content__contentPerson {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .team__content--personTwo .team__content__portada {
   background-image: url("../img/nosotros/mama-gapez-vertical.jpg");
   background-position: center center;
   background-size: cover;
+}
+
+@media only screen and (min-width: 0px) {
+  .team__content--personTwo .team__content__portada {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .team__content--personTwo .team__content__contentPerson__img2 {
@@ -839,6 +1010,40 @@ p {
   height: 70vh;
   background-position: center center;
   background-size: cover;
+}
+
+@media only screen and (min-width: 0px) {
+  .team__content--personTwo .team__content__contentPerson {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media only screen and (min-width: 0px) {
+  .team__content--personOne__portada, .team__content--personTwo__portada {
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 0px) {
+  .team__content--personOne__portada p, .team__content--personTwo__portada p {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .team__content--personOne .team__content__contentPerson, .team__content--personOne .team__content__portada, .team__content--personTwo .team__content__contentPerson, .team__content--personTwo .team__content__portada {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .team__content--personOne .team__content__portada, .team__content--personTwo .team__content__portada {
+    height: unset;
+  }
 }
 
 /*TERMINA SEECION NOSOTROS*/
@@ -870,6 +1075,25 @@ p {
   border-radius: 10px;
 }
 
+@media only screen and (min-width: 0px) {
+  .pageServicios__contServicio__portada {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pageServicios__contServicio__portada {
+    width: 48%;
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
+}
+
 .pageServicios__contServicio__portada--portada1 {
   background-image: url(../img/home/bodasXV.jpg);
 }
@@ -886,6 +1110,25 @@ p {
 .pageServicios__contServicio__contenido {
   width: 39%;
   text-align: center;
+}
+
+@media only screen and (min-width: 0px) {
+  .pageServicios__contServicio__contenido {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pageServicios__contServicio__contenido {
+    width: 48%;
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
 }
 
 /*TERMINA SEECION SERVICIOS*/
@@ -923,44 +1166,64 @@ p {
   transition: all 0.5s ease;
 }
 
+.pageSesiones__gridContainer__gridItem--wide {
+  /*  Responsive para secciion de Sesiones*/
+}
+
+@media (min-width: 600px) {
+  .pageSesiones__gridContainer__gridItem--wide {
+    grid-column: span 2;
+  }
+}
+
+.pageSesiones__gridContainer__gridItem--tall {
+  /*  Responsive para secciion de Sesiones*/
+}
+
+@media (min-width: 600px) {
+  .pageSesiones__gridContainer__gridItem--tall {
+    grid-row: span 2;
+  }
+}
+
 .pageSesiones__gridContainer__gridItem:nth-child(1) {
-  background-image: url(../img/sesiones/img7.jpg);
+  background-image: url("../img/sesiones/img1.jpg");
 }
 
 .pageSesiones__gridContainer__gridItem:nth-child(2) {
-  background-image: url(../img/sesiones/img8.jpg);
+  background-image: url("../img/sesiones/img2.jpg");
 }
 
 .pageSesiones__gridContainer__gridItem:nth-child(3) {
-  background-image: url(../img/sesiones/img9.jpg);
+  background-image: url("../img/sesiones/img3.jpg");
 }
 
 .pageSesiones__gridContainer__gridItem:nth-child(4) {
-  background-image: url(../img/sesiones/img10.jpg);
+  background-image: url("../img/sesiones/img4.jpg");
 }
 
 .pageSesiones__gridContainer__gridItem:nth-child(5) {
-  background-image: url(../img/sesiones/img11.jpg);
+  background-image: url("../img/sesiones/img5.jpg");
 }
 
 .pageSesiones__gridContainer__gridItem:nth-child(6) {
-  background-image: url(../img/sesiones/img12.jpg);
+  background-image: url("../img/sesiones/img6.jpg");
 }
 
 .pageSesiones__gridContainer__gridItem:nth-child(7) {
-  background-image: url(../img/sesiones/img13.jpg);
+  background-image: url("../img/sesiones/img7.jpg");
 }
 
 .pageSesiones__gridContainer__gridItem:nth-child(8) {
-  background-image: url(../img/sesiones/img14.jpg);
+  background-image: url("../img/sesiones/img8.jpg");
 }
 
 .pageSesiones__gridContainer__gridItem:nth-child(9) {
-  background-image: url(../img/sesiones/img15.jpg);
+  background-image: url("../img/sesiones/img9.jpg");
 }
 
 .pageSesiones__gridContainer__gridItem:nth-child(10) {
-  background-image: url(../img/sesiones/img16.jpg);
+  background-image: url("../img/sesiones/img10.jpg");
 }
 
 .pageSesiones__gridContainer__gridItem:hover {
@@ -999,8 +1262,22 @@ p {
           justify-content: center;
 }
 
-.pageWorkshops__grid__principal {
-  grid-column: 2 span;
+@media only screen and (min-width: 0px) {
+  .pageWorkshops__grid__principal, .pageWorkshops__grid__second {
+    grid-column: 1 span;
+  }
+}
+
+@media only screen and (min-width: 0px) {
+  .pageWorkshops__grid__principal {
+    min-height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pageWorkshops__grid__principal {
+    grid-column: 2 span;
+  }
 }
 
 .pageWorkshops__grid__principal__content h1 {
@@ -1016,6 +1293,22 @@ p {
   z-index: 2;
 }
 
+@media only screen and (min-width: 0px) {
+  .pageWorkshops__grid__principal__content h1 {
+    width: 100%;
+    font-size: 2.5rem;
+    max-width: 450px;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pageWorkshops__grid__principal__content h1 {
+    font-size: 4rem;
+    max-width: 600px;
+  }
+}
+
 .pageWorkshops__grid__principal__content p {
   text-align: center;
   letter-spacing: 3px;
@@ -1029,20 +1322,26 @@ p {
   background-size: cover;
 }
 
-.pageWorkshops__grid__second:nth-child(2) {
-  background-image: url("../img/workshops/workshop1.jpg");
+@media only screen and (min-width: 0px) {
+  .pageWorkshops__grid__second {
+    height: 70vh;
+  }
 }
 
-.pageWorkshops__grid__second:nth-child(3) {
+.pageWorkshops__grid__second:nth-child(2) {
   background-image: url("../img/workshops/workshop2.jpg");
 }
 
-.pageWorkshops__grid__second:nth-child(4) {
+.pageWorkshops__grid__second:nth-child(3) {
   background-image: url("../img/workshops/workshop3.jpg");
 }
 
-.pageWorkshops__grid__second:nth-child(5) {
+.pageWorkshops__grid__second:nth-child(4) {
   background-image: url("../img/workshops/workshop4.jpg");
+}
+
+.pageWorkshops__grid__second:nth-child(5) {
+  background-image: url("../img/workshops/workshop5.jpg");
 }
 
 .color-change-3x {
@@ -1105,22 +1404,63 @@ p {
   padding: 1rem;
 }
 
-.pageBlog__body__articulo {
+@media only screen and (min-width: 950px) {
+  .pageBlog__body__grid {
+    /*Responsive  para seccion Blog*/
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 2px auto;
+        grid-template-columns: auto 2px auto;
+    gap: 20px 70px;
+    padding: 3rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .pageBlog__body__grid__line {
+    /*Responsive  para seccion Blog*/
+    background-color: #fff;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .pageBlog__body__grid__line::before, .pageBlog__body__grid__line::after {
+    /*Responsive  para seccion Blog*/
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -9px;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .pageBlog__body__grid__line::after {
+    /*Responsive  para seccion Blog*/
+    top: 100%;
+    z-index: 1;
+  }
+}
+
+.pageBlog__body__grid__articulo {
   padding: 1rem;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
 }
 
-.pageBlog__body__articulo__blogs-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin: 2rem;
-}
-
-.pageBlog__body__articulo__blog-date {
+.pageBlog__body__grid__articulo__date {
   font-size: 3rem;
   font-weight: bold;
   color: #339989;
@@ -1128,7 +1468,23 @@ p {
   margin-bottom: 0;
 }
 
-.pageBlog__body__articulo__title {
+@media only screen and (min-width: 0px) {
+  .pageBlog__body__grid__articulo__date {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .pageBlog__body__grid__articulo__date {
+    /*Responsive  para seccion Blog*/
+    font-size: 40px;
+    font-size: 3rem;
+    text-align: left;
+  }
+}
+
+.pageBlog__body__grid__articulo__title {
   text-transform: uppercase;
   margin-top: 1rem;
   font-size: 2rem;
@@ -1137,15 +1493,64 @@ p {
   text-transform: initial;
 }
 
-.pageBlog__body__articulo__description {
+@media only screen and (min-width: 950px) {
+  .pageBlog__body__grid__articulo__title {
+    /*Responsive  para seccion Blog*/
+    font-size: 25px;
+    text-align: left;
+  }
+}
+
+.pageBlog__body__grid__articulo__title__description {
   font-weight: 400;
   font-size: 1rem;
   margin-top: 10px;
   line-height: 1.5rem;
 }
 
-.pageBlog__body__articulo .boton {
+@media only screen and (min-width: 950px) {
+  .pageBlog__body__grid__articulo__title__description {
+    /*Responsive  para seccion Blog*/
+    line-height: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .pageBlog__body__grid__articulo__title__description p {
+    /*Responsive  para seccion Blog*/
+    text-align: left;
+  }
+}
+
+.pageBlog__body__grid__articulo .boton {
   margin-top: 1rem;
+}
+
+@media only screen and (min-width: 0px) {
+  .pageBlog__body__grid__articulo .boton {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .pageBlog__body__grid__articulo .boton {
+    /*Responsive  para seccion Blog*/
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .pageBlog__body__grid__articulo--left .pageBlog__body__grid__articulo__date, .pageBlog__body__grid__articulo--left .pageBlog__body__grid__articulo__title, .pageBlog__body__grid__articulo--left .pageBlog__body__grid__articulo__description p {
+    /*Responsive  para seccion Blog*/
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 0px) {
+  .pageBlog__body__grid__articulo {
+    margin: 2rem auto;
+  }
 }
 
 /*TERMINA SEECION BLOG*/
@@ -1164,6 +1569,20 @@ p {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 0px) {
+  .pageContacto h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .pageContacto h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
 }
 
 .pageContacto p {
@@ -1225,284 +1644,9 @@ p {
 /*TERMINA SEECION CONTACTO*/
 /*--------------RESPONSIVE----------*/
 /* extra Small Devices*/
-@media only screen and (min-width: 0px) {
-  /*Generales*/
-  h1, h2, h3, h4, h5, h6, p {
-    text-align: center;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  /*Responsive Index*/
-  .banner h1 {
-    font-size: 2rem;
-    letter-spacing: .1rem;
-  }
-  .nosotros__perfil {
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 70vh;
-  }
-  .nosotros__perfil__info h3 {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .servicios__portada {
-    height: 70vh;
-  }
-  .servicios__contenido {
-    width: 100%;
-  }
-  .sesiones__imagenes__foto {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    height: 45vh;
-    background-position: top;
-  }
-  .workshops article {
-    height: 60vh;
-  }
-  .blog {
-    padding: 1rem;
-    height: auto;
-  }
-  /*Responsive Seccion NOSOTROS*/
-  .team__content {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .team__content__portada, .team__content__contentPerson {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  .team__content__portada {
-    height: 70vh;
-  }
-  .team__content--personOne__portada, .team__content--personTwo__portada {
-    height: 70vh;
-  }
-  .team__content--personOne__portada p, .team__content--personTwo__portada p {
-    text-align: center;
-  }
-  .team__content--personOne .team__content__contentPerson {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .team__content--personOne .team__content__portada {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  .team__content--personTwo .team__content__contentPerson {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  .team__content--personTwo .team__content__portada {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  /*Responsive Seccion SERVICIOS*/
-  .pageServicios__contServicio__portada {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 100%;
-    height: 70vh;
-  }
-  .pageServicios__contServicio__contenido {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    width: 100%;
-    margin-top: 1rem;
-  }
-  /*Estilos Workshops*/
-  .pageWorkshops__grid__principal {
-    min-height: auto;
-  }
-  .pageWorkshops__grid__principal__content h1 {
-    width: 100%;
-    font-size: 2.5rem;
-    max-width: 450px;
-    padding: 1rem;
-  }
-  .pageWorkshops__grid__second {
-    height: 70vh;
-  }
-  .pageWorkshops__grid__principal, .pageWorkshops__grid__second {
-    grid-column: 1 span;
-  }
-  /*Estilos Blog*/
-  .pageBlog__body__grid__articulo {
-    margin: 2rem 0;
-  }
-  .pageBlog__body__grid__articulo__date {
-    text-align: center;
-    font-size: 2rem;
-  }
-  .pageBlog .boton {
-    display: block;
-    margin: 0 auto;
-  }
-  /* Responsive Contacto*/
-  .pageContacto h1 {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
-}
-
-@media only screen and (min-width: 575px) {
-  /*Generales*/
-  h2 {
-    font-size: 3rem;
-  }
-  /*Responsive Index*/
-  .banner h1 {
-    font-size: 3.5rem;
-    letter-spacing: .8rem;
-  }
-}
-
 /*Small Devices*/
-@media (min-width: 600px) {
-  /*  Responsive para secciion de Sesiones*/
-  .pageSesiones__gridContainer__gridItem--wide {
-    grid-column: span 2;
-  }
-  .pageSesiones__gridContainer__gridItem--tall {
-    grid-row: span 2;
-  }
-}
-
 /*Medium devices*/
-@media only screen and (min-width: 768px) {
-  /*Estilos index*/
-  .nosotros__perfil {
-    background-size: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    height: initial;
-    height: 85vh;
-  }
-  .servicios__portada {
-    height: 80vh;
-  }
-  .sesiones__imagenes__foto {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    height: 70vh;
-  }
-  /*Responsive seccion NOSOTROS*/
-  .team__content__portada, .team__content__contentPerson {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .team__content--personOne .team__content__contentPerson, .team__content--personOne .team__content__portada, .team__content--personTwo .team__content__contentPerson, .team__content--personTwo .team__content__portada {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  .team__content--personOne .team__content__portada, .team__content--personTwo .team__content__portada {
-    height: unset;
-  }
-  /*Responsive seccion SERVICIOS*/
-  .pageServicios__contServicio__portada, .pageServicios__contServicio__contenido {
-    width: 48%;
-    -webkit-box-ordinal-group: initial;
-        -ms-flex-order: initial;
-            order: initial;
-  }
-  /*Estilos Workshops*/
-  .pageWorkshops__grid__principal {
-    grid-column: 2 span;
-  }
-  .pageWorkshops__grid__principal__workshopContent h1 {
-    font-size: 4rem;
-    max-width: 600px;
-  }
-}
-
 /*Large Devices*/
-@media only screen and (min-width: 991px) {
-  /*Estilos Contacto*/
-  .pageContacto h1 {
-    font-size: 5rem;
-    line-height: 5rem;
-  }
-}
-
-/*Responsive Blog*/
-@media (min-width: 950px) {
-  /*Estilos Blog*/
-  .pageBlog__body__grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto 2px auto;
-        grid-template-columns: auto 2px auto;
-    gap: 20px 70px;
-    padding: 3rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .pageBlog__body__grid__line {
-    background-color: #fff;
-    position: relative;
-  }
-  .pageBlog__body__grid__line::before, .pageBlog__body__grid__line::after {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: -20px;
-    left: -9px;
-  }
-  .pageBlog__body__grid__line::after {
-    top: 100%;
-    z-index: 1;
-  }
-  .pageBlog__body__grid__articulo .boton {
-    margin: 0;
-  }
-  .pageBlog__body__grid__articulo__date {
-    font-size: 40px;
-    font-size: 3rem;
-    text-align: left;
-  }
-  .pageBlog__body__grid__articulo__title {
-    font-size: 25px;
-    text-align: left;
-  }
-  .pageBlog__body__grid__articulo__title__description {
-    line-height: 1.3rem;
-  }
-  .pageBlog__body__grid__articulo__title__description p {
-    text-align: left;
-  }
-  .pageBlog__body__grid__articulo--left .pageBlog__body__grid__articulo__date, .pageBlog__body__grid__articulo--left .pageBlog__body__grid__articulo__title, .pageBlog__body__grid__articulo--left .pageBlog__body__grid__articulo__description p {
-    text-align: left;
-  }
-}
-
 /*Estilos pagina Error 404*/
 .error {
   height: 100vh;
