@@ -8,48 +8,87 @@
     box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $gray-strong; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $gray; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $gray; 
+  }
+
+  ::selection{
+      background-color: $gray;
+      color: $gray;
+  }
+
 body{
     font-family: 'Nanum Myeongjo', serif;
-    background-color: $gray-strong;
+    background-color: $black;
 }
 
-section{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
+
 
 h1{
-    color: $green-light;
     margin: 2rem 0;
     font-size: 4rem;
+    color: $gray;
 }
 
 h2{
-    color: $green-light; 
-    font-weight: 900;
-    text-transform: uppercase;
+    color: $gray; 
+    text-decoration: underline 2px;
+    text-underline-offset: 10px;
     letter-spacing: 1px;
-    text-align: center;
-    font-size: 3rem;
     margin-bottom: 2rem;
     
+    
+
     @include movil0{
         font-size: 2rem;
     }
 
     @include movil575{
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    @include movil991{
+        font-size: 2.5rem;
     }
     
 }
 
 h3{
-    font-style: italic;
-    color: $white;
+    color: $gray;
+
+    @include movil0{
+        font-size: 1rem;
+    }
+
+    @include movil575{
+        font-size: 1.5rem;
+    }
+
+    @include movil991{
+        font-size: 1.5rem;
+    }
 }
 
 h4{
-    color: $white;
+    color: $gray;
 }
 
 h5{
@@ -58,9 +97,8 @@ h5{
 }
 
 p{
-    color:$white;
+    color:$gray;
     font-size: 1rem;
-    margin: 1rem 0;
     line-height: 1.5rem;
 }
 
@@ -73,8 +111,9 @@ h1,h2,h3,h4,h5,h6,p{
 
 .boton{
     text-decoration: none;
-    background-color: rgb(73, 73, 73);
-    color: #fff;
+    background-color: rgba($gray-strong,0);
+    border: 1px solid $gray;
+    color: $gray;
     display: inline-block;
     padding: 10px;
     margin-bottom: 1rem;
@@ -88,9 +127,9 @@ h1,h2,h3,h4,h5,h6,p{
     z-index: 3;
 
     &:hover{
-        background-color: #111111;
+        background-color: $gray-strong;
         left: 1%;
-        color: $white;
+        color: $gray;
 
     }
 }
@@ -104,9 +143,50 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 
+.loader{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-strong;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    svg{
+        max-width: 180px;
+        width: 100%;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 3s linear alternate infinite;
+    }
+    
+    @keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+    }
+}
+
+
+
+
+
 
 /*Estilos Generales para Bootstrap*/
 .sinPadding{
     padding: 0;
+}
+
+.paddingTB{
+    
+    padding: 5rem 1rem;
+    display: flex;
+    align-items: center;
 }
 

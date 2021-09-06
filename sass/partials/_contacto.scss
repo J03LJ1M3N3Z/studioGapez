@@ -1,26 +1,45 @@
 /*INICIA SECCION CONTACTO*/
-.pageContacto{
-    padding: 5rem 0;
+
+.banner-contacto{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-image: url("../img/contacto/banner-contacto.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(1,27,22,0.373284347918855) 49%, rgba(0,0,0,1) 100%);
+    }
+
+    h1,h3{
+        position: relative;
+        z-index: 1;
+    }
 
     h1{
-        font-size: 5rem;
-        padding: 2rem;
-        line-height: 5rem;
+        
         text-align: center;
-        color: $white;
-        border: 1px solid $white;
-        max-width: 600px;
-        width: 100%;
-        margin: 0 auto; 
+        text-decoration: underline 2px;
+        text-underline-offset: 10px;
         
         @include movil0{
             font-size: 3rem;
             line-height: 3rem;
+            padding: .5rem;
         }
         
         @include movil991{
             font-size: 5rem;
-            line-height: 5rem;
         }
     }
 
@@ -30,6 +49,11 @@
         text-align: center;
     }
 
+}
+
+.pageContacto{
+    padding: 3rem 0;
+
     &__form{
         width:100%;
         
@@ -38,16 +62,26 @@
                 margin-top: 1rem;
                 padding: 1rem;
                 font-family: 'Nanum Myeongjo', serif;
-                background-color: $gray-strong;
-                border: 1px solid  $green-light;
-                color: $green-light;
+                background-color: $black;
+                border: 0;
+                border-radius: 0;
+                border-bottom: 1px solid $gray;
+                color: $gray;
+
+                &:focus{
+                    box-shadow: 0 0 0 0.25rem rgba($gray,0);
+                }
         }
         
 
         label{
-            color: $white;
-            margin-top: 1rem;
-            display: inline-block
+            color: $gray;
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            display: inline-block;
+            text-align: center;
+            display: block;
+            
         }
 
         textarea{
@@ -56,22 +90,28 @@
 
         .botones{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
+            
+            @include movil0{
+                flex-wrap: wrap;
+            }
         }
 
         .btn{
-            background-color: $gray;
             border: none;
-            color: $white;
+            color: $gray;
             max-width: 48%;
             width: 100%;
             cursor: pointer;
             transition: all .5s ease;
             border-radius: 0;
-            margin-top: 1rem;
+            margin-top: 3rem;
+            border: 1px solid $gray;
+            text-transform: uppercase;
+            max-width: 350px;
 
             &:hover{
-                background-color: $black;
+                background-color: $gray-strong;
             }
         }
 

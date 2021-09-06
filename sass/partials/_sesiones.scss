@@ -1,6 +1,40 @@
 /*INICIA SECCION SESIONES*/
+.banner-sesiones{
+    
+    height: 40vh;
+    display: flex;
+    align-items: center;
+
+    @include movil0{
+        margin-top: 6rem;
+    }
+
+    @include movil768{
+        margin-top: 8rem; 
+    }
+
+    @include movil991{
+        margin-top: 6rem;
+        background:none;
+    }
+
+    @include movil991{
+        margin-top: 3rem;
+        background-image: url('../img/home/fondo-blog.png');
+        background-position: top center;
+        background-size: cover;    
+    }
+
+    h1{
+        text-decoration: underline 2px;
+        text-underline-offset: 10px;
+    }
+}
+
 .pageSesiones{
-    margin-top: 5rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
 
     &__gridContainer{
         display: grid;
@@ -9,6 +43,19 @@
         gap: 1rem;
         padding: 1rem;
         grid-auto-flow: dense;
+
+        @include movil0{
+            margin-top: 2rem;
+        }
+
+
+        @include movil768{
+            margin-top: 4rem;
+        }
+
+        @include movil991{
+            margin-top: 1rem;
+        }
 
         &__gridItem{
             display: flex;

@@ -3,29 +3,104 @@
 .banner{
     width: 100%;
     height: $height;
-    background-position: top center;
-    background-size: cover;
-    background-image: url('../img/home/banner-home.jpg');
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    overflow: hidden;
 
-    h1{
-        color: $white;
-        letter-spacing: .8rem;
-        text-shadow: 6px 11px 16px $black;
+    &::after{
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: $height;
+        top: 0;
+        left: 0;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0.49653364763874297) 0%, rgba(0,20,19,0.6561975131849616) 49%, rgba(0,0,0,1) 100%);
+        z-index: 1;
+    }
+
+    &__fondo{
+        background-position: top center;
+        background-size: cover;
+        width: 100%;
+        height: $height;
+        background-image: url('../img/home/fondo-home.jpg');
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__personas{
+        background-image: url('../img/home/fondo-home2.jpg');
+        width: 100%;
+        height: $height;
+        background-size: cover;
+        background-position: center center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__text{
+        width: 100%;
+        height: $height;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
 
         @include movil0{
-            font-size: 2rem;
-            letter-spacing: .1rem; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        @include movil575{
-            font-size: 3.5rem;
-            letter-spacing: .8rem; 
+        h1{
+            padding: 1rem .5rem;
+
+            @include movil0{
+                font-size: 3rem;
+            }
+
+
+            @include movil768{
+                position: relative;
+                font-size: 4em;
+
+            }
+
+            @include movil991{
+                font-size: 5.5em;
+                position: absolute;
+                top: 35%;
+                left: 30%;
+                transform: translate(-50%, -50%);
+                overflow: hidden; /* Ensures the content is not revealed until the animation */
+                border-right: .03em solid $gray; /* The typwriter cursor */
+                white-space: nowrap; /* Keeps the content on a single line */
+                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                animation: 
+                typing 2.5s steps(25, end),
+                blink-caret .75s step-end infinite;
+
+            }
+
+            /* The typing effect */
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 40% }
+            }
+            
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: $gray; }
+            }
         }
+
     }
 }
+
+
 
 
 /*Estilos nosotros*/
@@ -33,14 +108,25 @@
 
 .nosotros {
     h2{
-        width: 100%; 
+        width: 100%;
+
+        @include movil991{
+            text-align: center;
+        }
+
+    }
+
+    p{
+        @include movil991{
+            text-align: center;
+        }  
     }
 
     &__perfil{
-        height: ($height)-10;
+        height: 70vh;
         display: flex;
         align-items: flex-end;
-        padding: 1rem;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         background-position: top center;
         position: relative;
@@ -56,9 +142,7 @@
             top: 0;
             left: 0;
             background: rgb(0,0,0);
-            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-            mix-blend-mode: multiply;
-            transition: all .5s ease;
+            background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,20,19,0.19121151878720233) 49%, rgba(0,0,0,1) 100%);
         }
 
         @each $perfil in MaGapez,FanyGapez{
@@ -68,37 +152,39 @@
             }
 
         }
+
         
         &__info{
+                width: 100%;
 
             h3{
                 z-index: 2;
                 position: relative;
-                font-size: 2rem;
-                font-style: normal;
-                border-bottom: 1px solid $white;
-                max-width: 350px;
-                padding: 10px;
-                
-                @include movil0{
-                    text-align: center;
-                    margin: 0 auto;
-                }
+                font-size: 3rem;
+                text-decoration: underline 2px;
+                text-underline-offset: 10px;
+                width: 100%;
+                transition: all .5s ease;
+                text-shadow: 0px 0px 12px $gray-strong;
             }
-
+            
             p{
-                padding: 1rem;
+                padding: 2rem 1rem;
                 z-index: 2;
                 position: relative;
                 bottom: -400px;
                 transition: all .5s ease;
+                background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.37888658881521353) 49%, rgba(0,0,0,1) 100%);
             }
+
+
         }
 
         &:hover{
             article{
                 p{
-                    bottom: 0;
+                    bottom: -10px;
                 }
             }
         }
@@ -121,7 +207,7 @@
             display: flex;
             align-items: flex-end;
             height: initial;
-            height: 85vh;
+            height: 70vh;
         }
     }
     
@@ -132,18 +218,29 @@
 .servicios {
     position: relative;
 
+
     h2{
         width: 100%;
+
+        @include movil991{
+            text-align: center;
+        }
+
+    }
+
+    p{
+        @include movil991{
+            text-align: center;
+        }  
     }
 
     &__portada{
-        padding: 1rem;
         text-align: center;
-        height: ($height)-20;
+        height:$height;
         display: flex;
         align-items: flex-end;
         background-size: cover;
-        background-position: center center;
+        background-position: top center;
         overflow: hidden;
         position: relative;
 
@@ -152,11 +249,12 @@
             content: " ";
             width: 100%;
             height: 100%;
-            bottom: -200px;
+            top: 0;
             left: 0;
             background: rgb(0,0,0);
-            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 11%, rgba(0,0,0,0) 100%);
+            background: linear-gradient(180deg, rgba(0,0,0,0.9419117988992471) 0%, rgba(0,20,19,0.28925073447347693) 49%, rgba(0,0,0,1) 100%);
             transition: all .5s ease;
+            opacity: 1;
         }
 
         @each $portada in bodasXV,tematicas,retratos{
@@ -173,6 +271,32 @@
             bottom: -200px;
             transition: all .5s ease;
 
+            h3{
+                margin-top: 1rem;
+                text-shadow: 0px 0px 12px $gray-strong;
+                
+                @include movil0{
+                    font-size: 2rem;
+                }
+
+                @include movil991{
+                    font-size: 2rem;
+                }
+            }
+
+            &::after{
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.37888658881521353) 49%, rgba(0,0,0,1) 100%);
+                z-index: -1;
+
+            }
+
             @include movil0{
                 width: 100%;
             }
@@ -185,7 +309,7 @@
             cursor: pointer;
 
             &::after{
-                bottom: 0;
+                opacity: .5;
             }
 
             .servicios{
@@ -206,7 +330,7 @@
         }
 
         @include movil768{
-            height: 80vh; 
+            height: 70vh; 
         }
     }
 }
@@ -216,6 +340,22 @@
 /*Estilos HOME-SESIONES*/
 
 .sesiones{
+
+    h2{
+        width: 100%;
+
+        @include movil991{
+            text-align: center;
+        }
+
+    }
+
+    p{
+        @include movil991{
+            text-align: center;
+        }  
+    }
+
     &__imagenes{
         display: flex;
         flex-wrap: wrap;
@@ -228,10 +368,11 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: ($height)-20;
+            height: $height;
             flex-grow: 1;
             transition: all .5s;
             filter: grayscale(2);
+            position: relative;
 
             @for $i from 1 through 6{
 
@@ -239,12 +380,31 @@
                     background-image: url('../img/sesiones/img#{$i}.jpg');
                 }
 
-            } 
+            }
+            
+            &::after{
+                position: absolute;
+                content: " ";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,0.9783263647255778) 0%, rgba(1,27,22,0.7290266448376226) 49%, rgba(0,0,0,1) 100%);
+                opacity: .9;
+                transition: all .5s;
+                
+            }
 
             &:hover{
                 flex-grow: 1.5;
                 background-position: top center;
                 filter: grayscale(0);
+                cursor: pointer;
+
+                &::after{
+                    opacity: 0;
+                }
             }
 
             @include movil0{
@@ -267,12 +427,27 @@
 
 .workshops{
     overflow: hidden;
+    h2{
+        width: 100%;
+
+        @include movil991{
+            text-align: center;
+        }
+
+    }
+
+    p{
+        @include movil991{
+            text-align: center;
+        }  
+    }
+
     &__articulo{
         min-height: ($height)-50;
         text-align: center;
-        padding: 1rem;
         display: flex;
         align-items: center;
+        padding: 1rem;
         transition: all .5s ease;
         position: relative;
         background-size: cover;
@@ -295,55 +470,77 @@
             position: absolute;
             left:0;
             top: 0;
-            content:"";
-            width:0%;
-            height: 0%;
-            border-top: 2px solid white;
-            transition: all 2s ease;
-        }
-
-        &::before{
-            position: absolute;
-            right: 0;
-            content:"";
-            width:0%;
+            content: " ";
+            width:100%;
             height: 100%;
-            border-bottom: 2px solid white;
-            transition: all 3s ease;
+            background-color: rgba($black,.95);
+            opacity: 1;
+            transition: all 1s ease;
+            
         }
 
         &__contenido{
-            background-color: rgba($black, 0.8);
             padding: 1rem;
-            bottom: -500px;
+            padding: 2rem;
             position: relative;
             transition: all .5s ease;
-            max-width: 500px;
-            width: 100%;
             margin: 0 auto;
-        }
+            border-radius: 1rem;
+            z-index: 2;
+            text-align: center;
 
-        &:hover{
-            cursor: pointer;
-            transform: scale(.9);
+            a{
+                text-decoration: none;
+                display: block;
+            }
 
             &::after{
-                animation: linefill 1s ease;
-                animation-fill-mode: forwards; 
+                position: absolute;
+                content: "";
+                left:0;
+                top: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $gray;
+                transition: all .5s ease;
             }
 
             &::before{
-                animation: linefill2 2s ease;
-                animation-delay: 0.9s;
-                animation-fill-mode: forwards;
+                position: absolute;
+                content: "";
+                right:0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $gray;
+                transition: all .5s ease;
             }
+        }
 
+        &:hover{
             .workshops{
                 &__articulo{
                     &__contenido{
-                        bottom: 0;
+                        background-color: rgba($black, 0.9);
+
+                        &::after{
+                            width: 0;
+                        }
+
+                        &::before{
+                            width: 0;
+                        }
                     }
+
                 }
+            }
+        }
+
+        &:hover{
+            background-position: inherit;
+            &::after{
+                background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,0.49653364763874297) 0%, rgba(0,20,19,0.300455216266194) 49%, rgba(0,0,0,1) 100%);
             }
         }
 
@@ -353,53 +550,51 @@
 
         
     }
+
 }
 
-/*ANIMACION AFTER*/
 
-@keyframes linefill{
-    50%{
-        width: 100%;
-        height: 0;
-    }
-    100%{
-        width: 100%;
-        height: 100%;
-        border-right: 2px solid white;
-    }
-}
-
-/*ANIMACION BEFORE*/
-@keyframes linefill2{
-    25%{
-        width: 100%;
-        height: 100%;
-    }
-    100%{
-        width: 100%;
-        height: 100%;
-        border-left: 2px solid white;
-    }
-}
 
 
 
 /*Estilos Blog*/
 .blog{
-    background-color:$gray;
+    background-image: url('../img/home/fondo-blog.png');
+    background-position: center center;
+    background-size: cover;
     padding: 2rem 0;
-    height: ($height)-50;
     align-items: center;
     justify-content: center;
     display: flex;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0.9783263647255778) 0%, rgba(1,27,22,0.03995101458552175) 49%, rgba(0,0,0,1) 100%);
+        z-index: 1; 
+        opacity: .8; 
+    }
 
     h2{
         margin-bottom: 0;
+        position: relative;
+        z-index: 2;
     }
+
 
     &__articulo{
         h3{
             text-align: center;
+            margin: 1em auto;
+            line-height: 2.5rem;
+            position: relative;
+            z-index: 2;
         }
 
         a{
@@ -410,64 +605,10 @@
 
     @include movil0{
         padding: 2rem;
-        height: auto;
+        height: $height;
     }
 }
 
-/* Estilos Contacto*/
-
-.contacto{
-    &__form{
-        .form-control{
-            width: 100%;
-            margin-top: 1rem;
-            padding: 1rem;
-            font-family: 'Nanum Myeongjo', serif;
-            background-color: $gray-strong;
-            border: 1px solid  $green-light;
-            color: $green-light;
-            
-            &::placeholder{
-                color: $white;
-            }
-
-            &:focus{
-                border: 1px solid rgba($white,.5);
-                box-shadow: 0 0 0 0.25rem rgba(91, 159, 148, .15);
-            }
-        }
-
-        textarea{
-            &.form-control{
-                resize: none;
-                height: 30vh;
-            }
-        }
-
-        &__botones{
-            .btn{
-                background-color: $gray;
-                max-width: 350px;
-                width: 100%;
-                border: none;
-                border-radius: 0;
-                color: $white;
-                cursor: pointer;
-                transition: all .5s ease;
-                margin: 1rem auto;
-                display: block;
-                padding: 1rem 0;
-                font-size: 1.2rem;
-    
-                &:hover{
-                    background-color: $black;
-                }
-            }
-        }
-    }
-
-    
-}
 
 
 

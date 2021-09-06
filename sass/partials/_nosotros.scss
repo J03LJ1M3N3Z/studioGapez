@@ -1,10 +1,11 @@
 /*INICIA SECCION NOSOTROS*/
 .team__content{
-    margin:0;
+    margin-top:5em;
+    margin-bottom: 5em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
 
     @include movil0{
         flex-wrap: wrap;   
@@ -13,12 +14,15 @@
     &__contentPerson,&__portada{
         flex-basis: 50%;
 
-        p{
-            padding: 1rem;
+        h2{
 
-            strong{
-                font-size: 2rem;
+            @include movil991{
+                font-size: 3.5rem;
+                letter-spacing: .3rem;
+                margin:0;
             }
+
+            
         }
 
         @include movil0{
@@ -31,6 +35,18 @@
     }
 
     &__portada{
+        position: relative;
+        &::after{
+            content: " ";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,0.9783263647255778) 0%, rgba(1,27,22,0.03995101458552175) 49%, rgba(0,0,0,1) 100%);
+        }
+
         @include movil0{
             height: 70vh;
         }
@@ -46,20 +62,44 @@
                 background-size: cover;
 
                 @include movil0{
-                    order: 2;
+                    order: 1;
                 }
             }
 
             &__contentPerson{
-                &__img2{
-                    background-image: url('../img/nosotros/fani-gapez.jpg');
-                    height: 70vh;
-                    background-position: center center;
-                    background-size: cover;      
-                }
+
+                padding: 3rem;
 
                 @include movil0{
-                    order: 1;
+                    order: 2;
+                    padding: 1rem;
+                }
+
+                h2{
+
+                    @include movil991{
+                        text-align: left;
+                        position: relative;
+                        left: -6rem;
+
+                    }
+                }
+
+                p{
+                    
+                    @include movil0{
+                        text-align: center;
+                    }
+
+                    @include movil991{
+                        text-align: left;
+                        margin-top: .5rem;
+                    }
+                }
+
+                a{
+                    margin: 0 auto;
+                    display: block;
                 }
             }
         }
@@ -78,20 +118,50 @@
                     order: 1;
                 }
             }
-    
+
             &__contentPerson{
-                &__img2{
-                    background-image: url('../img/nosotros/mama-gapez.jpg');
-                    height: 70vh;
-                    background-position: center center;
-                    background-size: cover;
-                }
+                padding: 3rem;
 
                 @include movil0{
                     order: 2;
+                    padding: 1rem;
+                }
+
+                h2{
+
+                    @include movil991{
+                        text-align: right;
+                        position: relative;
+                        right: -6rem;
+                        z-index: 2;
+
+                    }
+                }
+
+                p{
+                    
+                    @include movil0{
+                        text-align: center;
+                    }
+
+                    @include movil991{
+                        text-align: right;
+                        margin-top: .5em;
+                    }
+                }
+
+                a{
+                    @include movil0{
+                        float: initial;
+                        margin: 0 auto;
+                        display: block;
+                    }
+
+                    @include movil991{
+                        float: right;
+                    }
                 }
             }
-
         }  
         
     }
@@ -120,8 +190,8 @@
             }
 
             &__portada{
-                @include movil768{
-                    height: unset;
+                @include movil991{
+                    height: 90vh;
                 } 
             }
         }

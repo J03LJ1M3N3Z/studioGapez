@@ -9,38 +9,61 @@
     width: 100%; 
     position: absolute;
     top: 0;
-    background-color: rgba($black,.6);
     z-index: 99;
+
+    
+
+    @include movil0{
+        background-color: rgba($gray-strong,.9);
+    }
+
+    @include movil991{
+        background-color: unset;
+    }
+    
     .navbar-nav{
         .nav-item{
             width: 100%;
             margin: 5px;
             padding: 5px;
             position: relative;
+            transition: all .5s ease;
             &::after{
                 position: absolute;
                 content: "";
                 width: 0%;
                 height: 2px;
-                background-color: $white;
+                background-color: $gray;
                 margin-top: .2rem;
                 transition: all .5s ease;
                 bottom: 0;
                 left: 0;
             }
 
+            &::before{
+                position: absolute;
+                content: "";
+                width: 0%;
+                height: 2px;
+                background-color: $gray;
+                margin-top: .2rem;
+                transition: all .5s ease;
+                top: 0;
+                right: 0;
+            }
+
             &:hover{
-                &::after{
+                &::after,&::before{
                     width: 100%;
                 }
             }
 
             .nav-link{
                 text-decoration: none;
-                color:$white;
+                color:$gray;
                 display: block;
-                font-size: .8rem;
-                letter-spacing: .2rem;
+                font-size: .9rem;
+                letter-spacing: .3rem;
             }
         }
     }
@@ -78,20 +101,67 @@
     right: 2%;
     bottom: 2%;
     z-index: 3;
-    background-color: $green-light;
-    color: $white;
+    background-color: rgba($gray-strong,1);
+    color: $gray;
+    border: 1px solid $gray;
     transition: all .5s ease;
 
     &:hover{
-        background-color: $gray;
+        background-color: $gray-strong;
         color: $white;
+    }
+
+    &:focus{
+        box-shadow: 0 0 0 0.25rem rgba($gray,.2);
+    }
+
+    @include movil0{
+        display: none;
+    }
+
+    @include movil768{
+        display: block;
+    }
+
+    @include movil991{
+        display: block;
     }
 
 }
 
 .offcanvas{
     background-color: $gray-strong;
-    color: $green-light;
+    color: $gray;
+    
+
+    .offcanvas-header{
+        justify-content: center;
+    }
+
+    h5{
+        text-decoration: underline 2px;
+        text-underline-offset: 10px;
+        text-align: center;
+        color: $gray;
+    }
+    .offcanvas-body{
+        text-align: center;
+        img{
+            opacity: .6;
+            max-width: 250px;
+            width: 100%;
+            margin: 0 auto;
+            transform: scale(1);
+            transition: all .5s ease;
+
+            &:hover{
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+    }
+
+    
 }
 
 
