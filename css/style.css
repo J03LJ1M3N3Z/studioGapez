@@ -1996,6 +1996,7 @@ p {
 
 .pageBlog {
   margin-top: 1rem;
+  overflow: hidden;
 }
 
 .pageBlog__body {
